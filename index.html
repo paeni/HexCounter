@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScriptで作られたシンプルな16進数カウンター">
+  <title>16進数カウンター</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="counter-card">
+    <p class="eyebrow">HEX COUNTER</p>
+    <h1>16進数カウンター</h1>
+
+    <section class="display" aria-live="polite">
+      <span class="label">16進数</span>
+      <strong id="hexValue">0x00</strong>
+      <span id="decimalValue">10進数: 0</span>
+    </section>
+
+    <div class="button-grid">
+      <button id="decrementButton" type="button" aria-label="1減らす">−1</button>
+      <button id="incrementButton" type="button" class="primary" aria-label="1増やす">＋1</button>
+      <button id="decrement16Button" type="button" aria-label="16減らす">−0x10</button>
+      <button id="increment16Button" type="button" aria-label="16増やす">＋0x10</button>
+    </div>
+
+    <form id="valueForm">
+      <label for="valueInput">値を指定</label>
+      <div class="input-row">
+        <input
+          id="valueInput"
+          type="text"
+          inputmode="text"
+          placeholder="例: FF または 255"
+          autocomplete="off"
+        >
+        <button type="submit">設定</button>
+      </div>
+      <p class="hint">16進数は「0xFF」または「FF」、10進数は「255」の形式で入力できます。</p>
+      <p id="errorMessage" class="error" role="alert"></p>
+    </form>
+
+    <button id="resetButton" type="button" class="reset">リセット</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
