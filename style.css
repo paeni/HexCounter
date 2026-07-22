@@ -22,6 +22,7 @@ body {
 button,
 input {
   font: inherit;
+  touch-action: manipulation;
 }
 
 .counter-card {
